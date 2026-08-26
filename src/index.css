@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Black & Gold Luxury Nightlife Palette */
+  --color-void: #0B0908;
+  --color-void-soft: #15110D;
+  --color-gold: #C6A15B;
+  --color-gold-bright: #E8C77E;
+  --color-cream: #F3EAD9;
+  --color-cream-dim: rgba(243, 234, 217, 0.65);
+
+  /* Font Families */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Be Vietnam Pro', sans-serif;
+  --font-label: 'Jost', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B0908;
+  color: #F3EAD9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+::selection {
+  background-color: rgba(198, 161, 91, 0.35);
+  color: #0B0908;
+}
+
+/* ── Hero ── */
+.hero-title {
+  white-space: nowrap;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.2; transform: scaleY(1); }
+  50% { opacity: 0.8; transform: scaleY(1.1); }
+}
+
+.scroll-line {
+  animation: scrollPulse 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-line {
+    animation: none !important;
+  }
+}
